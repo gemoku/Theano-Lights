@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 try:
     import cPickle as pickle
@@ -22,6 +25,10 @@ from theano.sandbox.rng_mrg import MRG_RandomStreams
 from theano.tensor.nnet.conv import conv2d
 from theano.tensor.signal.downsample import max_pool_2d
 from theano.tensor.shared_randomstreams import RandomStreams
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 sys.setrecursionlimit(100000)
 

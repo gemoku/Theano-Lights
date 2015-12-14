@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import theano
 import theano.tensor as T
 from theano.sandbox.rng_mrg import MRG_RandomStreams
@@ -15,6 +18,9 @@ from operator import add
 
 from toolbox import *
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class ModelBase(object):
     def train_epoch(self, it_lr):

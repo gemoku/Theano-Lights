@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from collections import Counter
 import ConfigParser
 import argparse
@@ -5,6 +8,10 @@ import os
 import time
 import sys
 import numpy
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 def construct_vocabulary(dataset, oov_rate, level):
     filename = dataset + '_train'

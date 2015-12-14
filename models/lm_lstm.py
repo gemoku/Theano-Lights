@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import theano
 import theano.tensor as T
 from theano.sandbox.rng_mrg import MRG_RandomStreams
@@ -10,6 +13,9 @@ import numpy as np
 from toolbox import *
 from modelbase import *
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class LM_lstm(ModelLMBase):
     def __init__(self, data, hp):

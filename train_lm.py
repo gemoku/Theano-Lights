@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import time
 from operator import add
@@ -45,8 +48,9 @@ if __name__ == "__main__":
 #--------------------------------------------------------------------------------------------------
     data_path = 'data/'
 
-    data = tokentext(path=data_path+'penntree/', name='penntree', batch_size=batch_size, n_train=0)
+    # data = tokentext(path=data_path+'penntree/', name='penntree', batch_size=batch_size, n_train=0)
     #data = tokentext(path=data_path+'text8/', name='text8', batch_size=batch_size, n_train=0)
+    data = tokentext(path=data_path+'jap_rap_data/', name='japrap', batch_size=batch_size, n_train=0)
 
     visualize_tokens(-1, data['tr_X'][0:min(len(data['tr_X']), 500)]/float(data['n_tokens']), data['shape_x'])
     
